@@ -100,7 +100,7 @@
       line-height:1.05;
       letter-spacing:-.02em;
     }
-    .lead{color:var(--muted); font-size:16px; line-height:1.6; max-width:58ch}
+    .lead{color:var(--muted); font-size:16px; line-height:1.6; max-width:62ch}
     .actions{display:flex; flex-wrap:wrap; gap:12px; margin-top:18px}
     .btn{
       display:inline-flex; align-items:center; justify-content:center; gap:10px;
@@ -114,6 +114,32 @@
       background:linear-gradient(135deg, rgba(200,168,90,.95), rgba(241,211,138,.92));
       color:#0b0f17; border-color:rgba(255,255,255,.25);
     }
+
+    /* Trust strip near CTA */
+    .trustline{
+      margin-top:12px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      align-items:center;
+      color:var(--muted);
+      font-size:13px;
+    }
+    .pill{
+      display:inline-flex;
+      gap:8px;
+      align-items:center;
+      padding:8px 10px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background:rgba(11,15,23,.45);
+    }
+    .pill .spark{
+      width:7px; height:7px; border-radius:50%;
+      background:linear-gradient(135deg,var(--gold),var(--gold2));
+      box-shadow:0 0 0 5px rgba(200,168,90,.10);
+    }
+
     .mini{display:grid; grid-template-columns:1fr; gap:12px}
     .stat{
       padding:16px 16px;
@@ -136,6 +162,7 @@
     }
     .card h3{margin:0 0 8px; font-size:16px}
     .card p{margin:0; color:var(--muted); line-height:1.6; font-size:14px}
+
     .section{
       margin-top:22px;
       border:1px solid var(--line);
@@ -146,6 +173,50 @@
     }
     .section h2{margin:0 0 10px; font-size:20px}
     .sub{color:var(--muted); margin:0 0 14px; line-height:1.6}
+
+    /* FAQ styling */
+    .faq{
+      display:grid;
+      gap:10px;
+      margin-top:12px;
+    }
+    details{
+      border:1px solid var(--line);
+      border-radius:16px;
+      background:rgba(11,15,23,.50);
+      overflow:hidden;
+    }
+    summary{
+      cursor:pointer;
+      list-style:none;
+      padding:14px 16px;
+      font-weight:800;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px;
+    }
+    summary::-webkit-details-marker{display:none}
+    .chev{
+      width:28px;
+      height:28px;
+      border-radius:10px;
+      border:1px solid var(--line);
+      background:rgba(15,22,35,.45);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:var(--muted);
+      font-weight:900;
+    }
+    details[open] .chev{color:var(--text); border-color:rgba(200,168,90,.45)}
+    .faqbody{
+      padding:0 16px 14px;
+      color:var(--muted);
+      line-height:1.7;
+      font-size:14px;
+    }
+
     .formwrap{
       border:1px solid var(--line);
       background:rgba(11,15,23,.55);
@@ -189,8 +260,12 @@
         <h1>Sell Your Home Fast — <span style="background:linear-gradient(135deg,var(--gold),var(--gold2));-webkit-background-clip:text;background-clip:text;color:transparent;">On Your Terms</span></h1>
 
         <p class="lead">
-          Cash offers available, flexible timelines, and a straightforward process.
-          We help homeowners explore the best way to sell — whether that’s a direct cash offer or another tailored solution based on the property and your goals.
+          We buy homes across Michigan. In many situations, we’re able to make a <strong>cash offer</strong> for a smooth, straightforward sale —
+          and when it makes sense, we can also discuss other structures that may better fit the property and your goals.
+        </p>
+
+        <p class="lead" style="margin-top:10px;">
+          Fill out the form to <strong>request an offer</strong> and work directly with JT Home Buyers through a simple, professional process.
         </p>
 
         <div class="actions">
@@ -198,18 +273,24 @@
           <a class="btn" href="tel:+19894952743">Call/Text (989) 495-2743</a>
         </div>
 
+        <div class="trustline" aria-label="trust signals">
+          <span class="pill"><span class="spark"></span> No obligation</span>
+          <span class="pill"><span class="spark"></span> Direct communication</span>
+          <span class="pill"><span class="spark"></span> Professional process</span>
+        </div>
+
         <div class="grid" id="how">
           <div class="card">
-            <h3>1) Tell us about the property</h3>
-            <p>Share the address and a few details.</p>
+            <h3>1) Request an offer</h3>
+            <p>Share the address and a few details — it only takes a minute.</p>
           </div>
           <div class="card">
             <h3>2) We review your situation</h3>
             <p>We consider the home, the market, and your timeline.</p>
           </div>
           <div class="card">
-            <h3>3) Discuss the best path forward</h3>
-            <p>This may include a direct cash offer or other options depending on what makes the most sense.</p>
+            <h3>3) Move forward with a clear plan</h3>
+            <p>We handle the process based on the option that fits best.</p>
           </div>
         </div>
       </div>
@@ -239,20 +320,91 @@
     <div class="section">
       <h2>What we do</h2>
       <p class="sub">
-        JT Home Buyers LLC works with homeowners who want a straightforward, professional way to sell their property.
+        JT Home Buyers LLC is a direct home buying company. We work with homeowners who want a clear and reliable way to sell.
       </p>
       <p class="sub">
-        In many cases, we’re able to provide a <strong>cash offer</strong> for a fast, as-is sale. In other situations, we help guide sellers through alternative options that may better fit the home, market conditions, and timeline.
+        Depending on the property and situation, this may include a <strong>cash purchase</strong> or another approach designed to maximize the outcome for the seller.
       </p>
       <p class="sub">
-        <strong>We tailor the process to the property and the seller — not the other way around.</strong>
+        <strong>We tailor the process to the property and the seller — while staying directly involved from first conversation through closing.</strong>
       </p>
+
+      <!-- Mid-page CTA -->
+      <div class="actions" style="margin-top:16px;">
+        <a class="btn primary" href="#offer">Request an Offer</a>
+        <a class="btn" href="tel:+19894952743">Call/Text (989) 495-2743</a>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Why sellers choose JT Home Buyers</h2>
+      <div class="grid" style="margin-top:12px;">
+        <div class="card">
+          <h3>Cash offer options</h3>
+          <p>In many situations, we can make a cash offer for a straightforward sale.</p>
+        </div>
+        <div class="card">
+          <h3>Clear communication</h3>
+          <p>Direct, honest conversations — no runaround and no pressure.</p>
+        </div>
+        <div class="card">
+          <h3>Flexible paths forward</h3>
+          <p>When needed, we can discuss alternative structures based on your goals.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>FAQ</h2>
+      <p class="sub">A few common questions we hear from Michigan homeowners.</p>
+
+      <div class="faq">
+        <details>
+          <summary>
+            Do I have to accept an offer?
+            <span class="chev">+</span>
+          </summary>
+          <div class="faqbody">
+            No. Requesting an offer simply starts a conversation. You can review the details and decide what makes sense for you.
+          </div>
+        </details>
+
+        <details>
+          <summary>
+            Do you only buy with cash?
+            <span class="chev">+</span>
+          </summary>
+          <div class="faqbody">
+            In many cases, we can provide a cash offer. Depending on the property and goals, we may also discuss other structures that could be a better fit.
+          </div>
+        </details>
+
+        <details>
+          <summary>
+            How fast can this move?
+            <span class="chev">+</span>
+          </summary>
+          <div class="faqbody">
+            Timelines vary by property and situation, but we keep the process simple and communicate clearly so you always know the next step.
+          </div>
+        </details>
+
+        <details>
+          <summary>
+            What kinds of homes do you work with?
+            <span class="chev">+</span>
+          </summary>
+          <div class="faqbody">
+            Many types — from clean, move-in ready homes to properties that need repairs. Share the details and we’ll tell you what we can do.
+          </div>
+        </details>
+      </div>
     </div>
 
     <div class="section" id="offer">
       <h2>Request an Offer</h2>
       <p class="sub">
-        Requesting an offer does not obligate you to sell. It simply starts a conversation about what options may be available for your property.
+        This is the fastest way to see <strong>what JT Home Buyers can do for you</strong> and how we can help move your sale forward with confidence.
       </p>
 
       <div class="formwrap" style="padding:14px;">

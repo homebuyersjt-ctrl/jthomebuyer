@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>JT Home Buyers LLC | Michigan</title>
-  <meta name="description" content="JT Home Buyers LLC — Sell your home fast on your terms. Cash offers available and flexible options across Michigan. Request an offer today." />
+  <title>JT Home Buyers LLC | Michigan Home Buyers</title>
+  <meta name="description" content="JT Home Buyers LLC is a Michigan-based home buying company. We make cash offers and provide a smooth, professional selling process across Michigan." />
   <meta name="theme-color" content="#0b0f17" />
 
   <style>
@@ -20,10 +20,9 @@
       --shadow:0 20px 60px rgba(0,0,0,.45);
       --radius:18px;
       --max:1100px;
-      --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
     }
     *{box-sizing:border-box}
-    html,body{height:100%}
     body{
       margin:0;
       font-family:var(--font);
@@ -31,413 +30,282 @@
       background:
         radial-gradient(1200px 700px at 20% 10%, rgba(200,168,90,.18), transparent 60%),
         radial-gradient(900px 600px at 80% 0%, rgba(241,211,138,.10), transparent 55%),
-        radial-gradient(900px 700px at 50% 95%, rgba(120,160,255,.12), transparent 55%),
-        linear-gradient(180deg, var(--bg), #060813 55%, #05060d);
+        linear-gradient(180deg, var(--bg), #060813 60%, #05060d);
     }
-    a{color:inherit; text-decoration:none}
-    .wrap{max-width:var(--max); margin:0 auto; padding:24px}
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:var(--max);margin:0 auto;padding:24px}
+
     .nav{
-      display:flex; align-items:center; justify-content:space-between;
-      gap:14px; padding:14px 18px; border:1px solid var(--line);
-      background:rgba(15,22,35,.55); backdrop-filter: blur(10px);
-      border-radius:999px; box-shadow: var(--shadow);
-      position:sticky; top:16px; z-index:10;
+      display:flex;justify-content:space-between;align-items:center;
+      padding:14px 18px;border:1px solid var(--line);
+      border-radius:999px;background:rgba(15,22,35,.55);
+      box-shadow:var(--shadow);
+      margin-bottom:24px;
     }
-    .brand{display:flex; align-items:center; gap:10px; font-weight:700; letter-spacing:.4px}
-    .dot{
-      width:10px; height:10px; border-radius:50%;
-      background:linear-gradient(135deg, var(--gold), var(--gold2));
-      box-shadow:0 0 0 6px rgba(200,168,90,.10);
-    }
-    .navlinks{display:flex; gap:18px; align-items:center}
-    .navlinks a{color:var(--muted); font-weight:600; font-size:14px}
-    .navlinks a:hover{color:var(--text)}
+    .brand{font-weight:800;letter-spacing:.4px}
     .cta{
-      display:inline-flex; align-items:center; gap:10px;
-      padding:10px 14px; border-radius:999px;
-      background:linear-gradient(135deg, rgba(200,168,90,.95), rgba(241,211,138,.92));
-      color:#0b0f17; font-weight:800; font-size:14px;
-      box-shadow:0 18px 40px rgba(200,168,90,.18);
-      border:1px solid rgba(255,255,255,.25);
-    }
-    .cta:hover{transform: translateY(-1px)}
-    .hero{
-      margin-top:28px;
-      display:grid; grid-template-columns: 1.15fr .85fr; gap:22px;
-      align-items:stretch;
-    }
-    @media (max-width: 900px){ .hero{grid-template-columns:1fr; } .nav{position:static} }
-    .panel{
-      border:1px solid var(--line);
-      background:rgba(15,22,35,.60);
-      border-radius:var(--radius);
-      padding:28px;
-      box-shadow: var(--shadow);
-      overflow:hidden;
-      position:relative;
-    }
-    .panel:before{
-      content:"";
-      position:absolute; inset:-2px;
-      background: radial-gradient(600px 200px at 20% 0%, rgba(200,168,90,.22), transparent 55%),
-                  radial-gradient(600px 200px at 85% 10%, rgba(120,160,255,.18), transparent 55%);
-      pointer-events:none;
-      opacity:.7;
-    }
-    .panel > *{position:relative}
-    .kicker{
-      display:inline-flex; gap:10px; align-items:center;
-      font-size:12px; letter-spacing:.18em; text-transform:uppercase;
-      color:var(--muted);
-    }
-    .kicker .line{
-      width:34px; height:1px; background:linear-gradient(90deg, transparent, var(--gold), transparent);
-      opacity:.9;
-    }
-    h1{
-      margin:14px 0 10px;
-      font-size: clamp(30px, 4.2vw, 54px);
-      line-height:1.05;
-      letter-spacing:-.02em;
-    }
-    .lead{color:var(--muted); font-size:16px; line-height:1.6; max-width:62ch}
-    .actions{display:flex; flex-wrap:wrap; gap:12px; margin-top:18px}
-    .btn{
-      display:inline-flex; align-items:center; justify-content:center; gap:10px;
-      padding:12px 16px; border-radius:12px;
-      border:1px solid var(--line);
-      background:rgba(11,15,23,.55);
-      color:var(--text); font-weight:800;
-    }
-    .btn:hover{border-color:rgba(200,168,90,.55)}
-    .btn.primary{
-      background:linear-gradient(135deg, rgba(200,168,90,.95), rgba(241,211,138,.92));
-      color:#0b0f17; border-color:rgba(255,255,255,.25);
+      padding:10px 14px;border-radius:999px;
+      background:linear-gradient(135deg,var(--gold),var(--gold2));
+      color:#0b0f17;font-weight:800;
     }
 
-    /* Trust strip near CTA */
+    .hero{
+      display:grid;grid-template-columns:1.2fr .8fr;gap:22px;
+    }
+    @media(max-width:900px){.hero{grid-template-columns:1fr}}
+
+    .panel{
+      background:rgba(15,22,35,.6);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:28px;
+      box-shadow:var(--shadow);
+    }
+
+    h1{
+      font-size:clamp(30px,4vw,52px);
+      line-height:1.05;margin:10px 0;
+    }
+    .lead{color:var(--muted);line-height:1.6;max-width:65ch}
+
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+    .btn{
+      padding:12px 16px;border-radius:12px;
+      border:1px solid var(--line);
+      font-weight:800;
+      background:rgba(11,15,23,.6);
+    }
+    .btn.primary{
+      background:linear-gradient(135deg,var(--gold),var(--gold2));
+      color:#0b0f17;
+    }
+
     .trustline{
-      margin-top:12px;
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-      align-items:center;
+      margin-top:14px;
       color:var(--muted);
       font-size:13px;
     }
-    .pill{
-      display:inline-flex;
-      gap:8px;
-      align-items:center;
-      padding:8px 10px;
-      border-radius:999px;
-      border:1px solid var(--line);
-      background:rgba(11,15,23,.45);
-    }
-    .pill .spark{
-      width:7px; height:7px; border-radius:50%;
-      background:linear-gradient(135deg,var(--gold),var(--gold2));
-      box-shadow:0 0 0 5px rgba(200,168,90,.10);
-    }
 
-    .mini{display:grid; grid-template-columns:1fr; gap:12px}
-    .stat{
-      padding:16px 16px;
-      border-radius:16px;
-      border:1px solid var(--line);
-      background:rgba(11,15,23,.50);
-    }
-    .stat .t{color:var(--muted); font-size:13px}
-    .stat .v{font-weight:900; font-size:18px; margin-top:6px}
-    .grid{
-      margin-top:18px;
-      display:grid; grid-template-columns: repeat(3, 1fr); gap:14px;
-    }
-    @media (max-width: 900px){ .grid{grid-template-columns:1fr} }
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:20px}
+    @media(max-width:900px){.grid{grid-template-columns:1fr}}
+
     .card{
-      border:1px solid var(--line);
-      background:rgba(15,22,35,.45);
-      border-radius:16px;
-      padding:18px;
-    }
-    .card h3{margin:0 0 8px; font-size:16px}
-    .card p{margin:0; color:var(--muted); line-height:1.6; font-size:14px}
-
-    .section{
-      margin-top:22px;
-      border:1px solid var(--line);
-      background:rgba(15,22,35,.40);
-      border-radius:var(--radius);
-      padding:22px;
-      box-shadow: var(--shadow);
-    }
-    .section h2{margin:0 0 10px; font-size:20px}
-    .sub{color:var(--muted); margin:0 0 14px; line-height:1.6}
-
-    /* FAQ styling */
-    .faq{
-      display:grid;
-      gap:10px;
-      margin-top:12px;
-    }
-    details{
-      border:1px solid var(--line);
-      border-radius:16px;
-      background:rgba(11,15,23,.50);
-      overflow:hidden;
-    }
-    summary{
-      cursor:pointer;
-      list-style:none;
-      padding:14px 16px;
-      font-weight:800;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:14px;
-    }
-    summary::-webkit-details-marker{display:none}
-    .chev{
-      width:28px;
-      height:28px;
-      border-radius:10px;
-      border:1px solid var(--line);
-      background:rgba(15,22,35,.45);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      color:var(--muted);
-      font-weight:900;
-    }
-    details[open] .chev{color:var(--text); border-color:rgba(200,168,90,.45)}
-    .faqbody{
-      padding:0 16px 14px;
-      color:var(--muted);
-      line-height:1.7;
-      font-size:14px;
-    }
-
-    .formwrap{
       border:1px solid var(--line);
       background:rgba(11,15,23,.55);
       border-radius:16px;
-      overflow:hidden;
+      padding:18px;
     }
+
+    .section{
+      margin-top:26px;
+      border:1px solid var(--line);
+      background:rgba(15,22,35,.45);
+      border-radius:var(--radius);
+      padding:22px;
+      box-shadow:var(--shadow);
+    }
+    .sub{color:var(--muted);line-height:1.6}
+
+    details{
+      border:1px solid var(--line);
+      border-radius:16px;
+      background:rgba(11,15,23,.55);
+      margin-bottom:10px;
+    }
+    summary{
+      padding:14px 16px;
+      cursor:pointer;
+      font-weight:800;
+      list-style:none;
+    }
+    summary::-webkit-details-marker{display:none}
+    .faqbody{padding:0 16px 14px;color:var(--muted);line-height:1.6}
+
+    .formwrap{
+      border:1px solid var(--line);
+      border-radius:16px;
+      background:rgba(11,15,23,.55);
+      padding:14px;
+    }
+
     .consent{
-      margin-top:10px;
-      color:var(--muted);
-      font-size:12.5px;
-      line-height:1.5;
+      font-size:12.5px;color:var(--muted);margin-top:10px;
     }
+
     .footer{
-      margin:22px 0 10px;
-      display:flex; flex-wrap:wrap; justify-content:space-between; gap:12px;
-      color:var(--muted); font-size:13px;
-      padding:14px 6px;
+      margin-top:30px;
+      font-size:13px;color:var(--muted);
+      display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;
     }
-    .footer a{color:var(--text); text-decoration:underline; text-decoration-color:rgba(200,168,90,.55)}
+    .footer a{text-decoration:underline}
   </style>
 </head>
 
 <body>
-  <div class="wrap">
-    <div class="nav">
-      <div class="brand">
-        <span class="dot"></span>
-        <span>JT Home Buyers LLC</span>
-      </div>
-      <div class="navlinks">
-        <a href="#how">How it works</a>
-        <a href="#offer">Request an offer</a>
-        <a class="cta" href="tel:+19894952743">Call/Text (989) 495-2743</a>
-      </div>
-    </div>
+<div class="wrap">
 
-    <div class="hero">
-      <div class="panel">
-        <div class="kicker"><span class="line"></span><span>Based in Midland, Michigan — Serving all of Michigan</span></div>
+  <div class="nav">
+    <div class="brand">JT Home Buyers LLC</div>
+    <a class="cta" href="tel:+19894952743">Call/Text (989) 495-2743</a>
+  </div>
 
-        <h1>Sell Your Home Fast — <span style="background:linear-gradient(135deg,var(--gold),var(--gold2));-webkit-background-clip:text;background-clip:text;color:transparent;">On Your Terms</span></h1>
+  <div class="hero">
+    <div class="panel">
+      <h1>
+        Sell Your Home Fast —
+        <span style="background:linear-gradient(135deg,var(--gold),var(--gold2));-webkit-background-clip:text;color:transparent;">
+          On Your Terms
+        </span>
+      </h1>
 
-        <p class="lead">
-          We buy homes across Michigan. In many situations, we’re able to make a <strong>cash offer</strong> for a smooth, straightforward sale —
-          and when it makes sense, we can also discuss other structures that may better fit the property and your goals.
-        </p>
-
-        <p class="lead" style="margin-top:10px;">
-          Fill out the form to <strong>request an offer</strong> and work directly with JT Home Buyers through a simple, professional process.
-        </p>
-
-        <div class="actions">
-          <a class="btn primary" href="#offer">Request an Offer</a>
-          <a class="btn" href="tel:+19894952743">Call/Text (989) 495-2743</a>
-        </div>
-
-        <div class="trustline" aria-label="trust signals">
-          <span class="pill"><span class="spark"></span> No obligation</span>
-          <span class="pill"><span class="spark"></span> Direct communication</span>
-          <span class="pill"><span class="spark"></span> Professional process</span>
-        </div>
-
-        <div class="grid" id="how">
-          <div class="card">
-            <h3>1) Request an offer</h3>
-            <p>Share the address and a few details — it only takes a minute.</p>
-          </div>
-          <div class="card">
-            <h3>2) We review your situation</h3>
-            <p>We consider the home, the market, and your timeline.</p>
-          </div>
-          <div class="card">
-            <h3>3) Move forward with a clear plan</h3>
-            <p>We handle the process based on the option that fits best.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="panel">
-        <div class="mini">
-          <div class="stat">
-            <div class="t">Service area</div>
-            <div class="v">All of Michigan</div>
-          </div>
-          <div class="stat">
-            <div class="t">Based in</div>
-            <div class="v">Midland, MI</div>
-          </div>
-          <div class="stat">
-            <div class="t">Approach</div>
-            <div class="v">We tailor the process</div>
-          </div>
-          <div class="stat">
-            <div class="t">Phone</div>
-            <div class="v">(989) 495-2743</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="section">
-      <h2>What we do</h2>
-      <p class="sub">
-        JT Home Buyers LLC is a direct home buying company. We work with homeowners who want a clear and reliable way to sell.
-      </p>
-      <p class="sub">
-        Depending on the property and situation, this may include a <strong>cash purchase</strong> or another approach designed to maximize the outcome for the seller.
-      </p>
-      <p class="sub">
-        <strong>We tailor the process to the property and the seller — while staying directly involved from first conversation through closing.</strong>
+      <p class="lead">
+        We buy homes across Michigan. We’re able to make a <strong>cash offer</strong> for a smooth,
+        straightforward sale — and when it makes sense, we can also discuss other structures
+        that may better fit the property and your goals.
       </p>
 
-      <!-- Mid-page CTA -->
-      <div class="actions" style="margin-top:16px;">
+      <p class="lead">
+        Fill out the form to <strong>request an offer</strong> and work directly with JT Home Buyers
+        through a simple, professional process.
+      </p>
+
+      <div class="actions">
         <a class="btn primary" href="#offer">Request an Offer</a>
-        <a class="btn" href="tel:+19894952743">Call/Text (989) 495-2743</a>
+        <a class="btn" href="tel:+19894952743">Call/Text</a>
       </div>
-    </div>
 
-    <div class="section">
-      <h2>Why sellers choose JT Home Buyers</h2>
-      <div class="grid" style="margin-top:12px;">
-        <div class="card">
-          <h3>Cash offer options</h3>
-          <p>In many situations, we can make a cash offer for a straightforward sale.</p>
-        </div>
-        <div class="card">
-          <h3>Clear communication</h3>
-          <p>Direct, honest conversations — no runaround and no pressure.</p>
-        </div>
-        <div class="card">
-          <h3>Flexible paths forward</h3>
-          <p>When needed, we can discuss alternative structures based on your goals.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="section">
-      <h2>FAQ</h2>
-      <p class="sub">A few common questions we hear from Michigan homeowners.</p>
-
-      <div class="faq">
-        <details>
-          <summary>
-            Do I have to accept an offer?
-            <span class="chev">+</span>
-          </summary>
-          <div class="faqbody">
-            No. Requesting an offer simply starts a conversation. You can review the details and decide what makes sense for you.
-          </div>
-        </details>
-
-        <details>
-          <summary>
-            Do you only buy with cash?
-            <span class="chev">+</span>
-          </summary>
-          <div class="faqbody">
-            In many cases, we can provide a cash offer. Depending on the property and goals, we may also discuss other structures that could be a better fit.
-          </div>
-        </details>
-
-        <details>
-          <summary>
-            How fast can this move?
-            <span class="chev">+</span>
-          </summary>
-          <div class="faqbody">
-            Timelines vary by property and situation, but we keep the process simple and communicate clearly so you always know the next step.
-          </div>
-        </details>
-
-        <details>
-          <summary>
-            What kinds of homes do you work with?
-            <span class="chev">+</span>
-          </summary>
-          <div class="faqbody">
-            Many types — from clean, move-in ready homes to properties that need repairs. Share the details and we’ll tell you what we can do.
-          </div>
-        </details>
-      </div>
-    </div>
-
-    <div class="section" id="offer">
-      <h2>Request an Offer</h2>
-      <p class="sub">
-        This is the fastest way to see <strong>what JT Home Buyers can do for you</strong> and how we can help move your sale forward with confidence.
+      <p class="trustline">
+        Michigan-based buyers • No obligation • Direct communication • Professional process
       </p>
 
-      <div class="formwrap" style="padding:14px;">
-        <!-- BEGIN Podio web form -->
-        <script src="https://podio.com/webforms/30586890/2588642.js"></script>
-        <script type="text/javascript">
-          _podioWebForm.render("2588642");
-        </script>
-        <noscript>
-          <a href="https://podio.com/webforms/30586890/2588642" target="_blank" rel="noopener">
-            Please fill out the form
-          </a>
-        </noscript>
-        <!-- END Podio web form -->
+      <div class="grid">
+        <div class="card">
+          <h3>1) Request an offer</h3>
+          <p class="sub">Share a few details about the property.</p>
+        </div>
+        <div class="card">
+          <h3>2) Review & discussion</h3>
+          <p class="sub">We evaluate the home and talk through options.</p>
+        </div>
+        <div class="card">
+          <h3>3) Move forward confidently</h3>
+          <p class="sub">We handle the process based on what fits best.</p>
+        </div>
       </div>
-
-      <p class="consent">
-        By submitting this form, you agree to receive calls and text messages from JT Home Buyers LLC regarding your property inquiry.
-        Message and data rates may apply. Reply STOP to opt out.
-      </p>
     </div>
 
-    <div class="footer">
-      <div>© <span id="y"></span> JT Home Buyers LLC • Midland, MI • Serving all of Michigan</div>
-      <div>
-        <a href="privacy.html">Privacy Policy</a> •
-        <a href="tel:+19894952743">Call/Text (989) 495-2743</a>
-      </div>
+    <div class="panel">
+      <p class="sub"><strong>Service area:</strong> All of Michigan</p>
+      <p class="sub"><strong>Based in:</strong> Midland, MI</p>
+      <p class="sub"><strong>Focus:</strong> Michigan properties only</p>
+      <p class="sub"><strong>Phone:</strong> (989) 495-2743</p>
     </div>
   </div>
 
-  <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
-  </script>
+  <div class="section">
+    <h2>What we do</h2>
+
+    <p class="sub">
+      JT Home Buyers LLC is a direct home buying company. We work with homeowners who want a
+      clear, reliable way to sell without unnecessary back-and-forth.
+    </p>
+
+    <p class="sub">
+      Unlike national companies that try to do deals in every state, we focus exclusively on
+      <strong>Michigan</strong>. We live here, work here, and understand the local nuances that
+      matter across the state.
+    </p>
+
+    <p class="sub">
+      That local focus allows us to evaluate Michigan properties accurately and move forward
+      with confidence, because this is the market we know best.
+    </p>
+
+    <p class="sub">
+      <strong>We tailor the process to the property and the seller — while staying directly
+      involved from first conversation through closing.</strong>
+    </p>
+
+    <div class="actions">
+      <a class="btn primary" href="#offer">Request an Offer</a>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>FAQ</h2>
+
+    <details>
+      <summary>Do I have to accept an offer?</summary>
+      <div class="faqbody">
+        No. Requesting an offer simply starts a conversation. You’re free to review the details
+        and decide what makes sense for you.
+      </div>
+    </details>
+
+    <details>
+      <summary>How fast can this move?</summary>
+      <div class="faqbody">
+        Our average closing timeline is around <strong>45 days</strong>. Depending on the
+        property and your needs, we can sometimes close in as little as <strong>14 days</strong>
+        — or structure the sale to allow up to <strong>6 months</strong>.
+        <br><br>
+        The goal is to give you an offer in hand and peace of mind, even if you’re not ready to
+        move right away.
+      </div>
+    </details>
+
+    <details>
+      <summary>What kinds of homes do you work with?</summary>
+      <div class="faqbody">
+        We work with virtually every type of residential property — from move-in ready homes,
+        to properties needing minor repairs, all the way to homes requiring a full renovation.
+        <br><br>
+        We also regularly make offers on <strong>multi-family properties</strong> and
+        <strong>portfolios of multiple properties</strong>.
+        <br><br>
+        There are very few situations where we won’t make an offer. If you’re unsure, the best
+        next step is to share the details and let us take a look.
+      </div>
+    </details>
+  </div>
+
+  <div class="section" id="offer">
+    <h2>Request an Offer</h2>
+    <p class="sub">
+      This is the fastest way to see <strong>what JT Home Buyers can do for you</strong> and how
+      we can help move your sale forward with confidence.
+    </p>
+
+    <div class="formwrap">
+      <script src="https://podio.com/webforms/30586890/2588642.js"></script>
+      <script>
+        _podioWebForm.render("2588642");
+      </script>
+      <noscript>
+        <a href="https://podio.com/webforms/30586890/2588642" target="_blank">
+          Please fill out the form
+        </a>
+      </noscript>
+    </div>
+
+    <p class="consent">
+      By submitting this form, you agree to receive calls and text messages from JT Home Buyers LLC
+      regarding your property inquiry. Message and data rates may apply. Reply STOP to opt out.
+    </p>
+  </div>
+
+  <div class="footer">
+    <div>© <span id="y"></span> JT Home Buyers LLC • Midland, MI • Serving all of Michigan</div>
+    <div>
+      <a href="privacy.html">Privacy Policy</a> •
+      <a href="tel:+19894952743">(989) 495-2743</a>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  document.getElementById("y").textContent = new Date().getFullYear();
+</script>
 </body>
 </html>

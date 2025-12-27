@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>JT Home Buyers LLC | Midland, MI</title>
+  <meta name="description" content="JT Home Buyers LLC — Local Midland, MI home buyers. Sell your house as-is. Fast, professional, and no pressure." />
+  <meta name="theme-color" content="#0b0f17" />
+
+  <style>
+    :root{
+      --bg:#070a10;
+      --panel:#0b0f17;
+      --card:#0f1623;
+      --text:#eaf0ff;
+      --muted:#a7b0c7;
+      --line:rgba(255,255,255,.10);
+      --gold:#c8a85a;
+      --gold2:#f1d38a;
+      --shadow:0 20px 60px rgba(0,0,0,.45);
+      --radius:18px;
+      --max:1100px;
+      --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:var(--font);
+      color:var(--text);
+      background:
+        radial-gradient(1200px 700px at 20% 10%, rgba(200,168,90,.18), transparent 60%),
+        radial-gradient(900px 600px at 80% 0%, rgba(241,211,138,.10), transparent 55%),
+        radial-gradient(900px 700px at 50% 95%, rgba(120,160,255,.12), transparent 55%),
+        linear-gradient(180deg, var(--bg), #060813 55%, #05060d);
+    }
+    a{color:inherit; text-decoration:none}
+    .wrap{max-width:var(--max); margin:0 auto; padding:24px}
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:14px; padding:14px 18px; border:1px solid var(--line);
+      background:rgba(15,22,35,.55); backdrop-filter: blur(10px);
+      border-radius:999px; box-shadow: var(--shadow);
+      position:sticky; top:16px; z-index:10;
+    }
+    .brand{display:flex; align-items:center; gap:10px; font-weight:700; letter-spacing:.4px}
+    .dot{
+      width:10px; height:10px; border-radius:50%;
+      background:linear-gradient(135deg, var(--gold), var(--gold2));
+      box-shadow:0 0 0 6px rgba(200,168,90,.10);
+    }
+    .navlinks{display:flex; gap:18px; align-items:center}
+    .navlinks a{color:var(--muted); font-weight:600; font-size:14px}
+    .navlinks a:hover{color:var(--text)}
+    .cta{
+      display:inline-flex; align-items:center; gap:10px;
+      padding:10px 14px; border-radius:999px;
+      background:linear-gradient(135deg, rgba(200,168,90,.95), rgba(241,211,138,.92));
+      color:#0b0f17; font-weight:800; font-size:14px;
+      box-shadow:0 18px 40px rgba(200,168,90,.18);
+      border:1px solid rgba(255,255,255,.25);
+    }
+    .cta:hover{transform: translateY(-1px)}
+    .hero{
+      margin-top:28px;
+      display:grid; grid-template-columns: 1.15fr .85fr; gap:22px;
+      align-items:stretch;
+    }
+    @media (max-width: 900px){ .hero{grid-template-columns:1fr; } .nav{position:static} }
+    .panel{
+      border:1px solid var(--line);
+      background:rgba(15,22,35,.60);
+      border-radius:var(--radius);
+      padding:28px;
+      box-shadow: var(--shadow);
+      overflow:hidden;
+      position:relative;
+    }
+    .panel:before{
+      content:"";
+      position:absolute; inset:-2px;
+      background: radial-gradient(600px 200px at 20% 0%, rgba(200,168,90,.22), transparent 55%),
+                  radial-gradient(600px 200px at 85% 10%, rgba(120,160,255,.18), transparent 55%);
+      pointer-events:none;
+      opacity:.7;
+    }
+    .panel > *{position:relative}
+    .kicker{
+      display:inline-flex; gap:10px; align-items:center;
+      font-size:12px; letter-spacing:.18em; text-transform:uppercase;
+      color:var(--muted);
+    }
+    .kicker .line{
+      width:34px; height:1px; background:linear-gradient(90deg, transparent, var(--gold), transparent);
+      opacity:.9;
+    }
+    h1{
+      margin:14px 0 10px;
+      font-size: clamp(30px, 4.2vw, 54px);
+      line-height:1.05;
+      letter-spacing:-.02em;
+    }
+    .lead{color:var(--muted); font-size:16px; line-height:1.6; max-width:58ch}
+    .actions{display:flex; flex-wrap:wrap; gap:12px; margin-top:18px}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:10px;
+      padding:12px 16px; border-radius:12px;
+      border:1px solid var(--line);
+      background:rgba(11,15,23,.55);
+      color:var(--text); font-weight:800;
+    }
+    .btn:hover{border-color:rgba(200,168,90,.55)}
+    .btn.primary{
+      background:linear-gradient(135deg, rgba(200,168,90,.95), rgba(241,211,138,.92));
+      color:#0b0f17; border-color:rgba(255,255,255,.25);
+    }
+    .mini{
+      display:grid; grid-template-columns:1fr; gap:12px;
+    }
+    .stat{
+      padding:16px 16px;
+      border-radius:16px;
+      border:1px solid var(--line);
+      background:rgba(11,15,23,.50);
+    }
+    .stat .t{color:var(--muted); font-size:13px}
+    .stat .v{font-weight:900; font-size:18px; margin-top:6px}
+    .grid{
+      margin-top:18px;
+      display:grid; grid-template-columns: repeat(3, 1fr); gap:14px;
+    }
+    @media (max-width: 900px){ .grid{grid-template-columns:1fr} }
+    .card{
+      border:1px solid var(--line);
+      background:rgba(15,22,35,.45);
+      border-radius:16px;
+      padding:18px;
+    }
+    .card h3{margin:0 0 8px; font-size:16px}
+    .card p{margin:0; color:var(--muted); line-height:1.6; font-size:14px}
+    .section{
+      margin-top:22px;
+      border:1px solid var(--line);
+      background:rgba(15,22,35,.40);
+      border-radius:var(--radius);
+      padding:22px;
+      box-shadow: var(--shadow);
+    }
+    .section h2{margin:0 0 10px; font-size:20px}
+    .sub{color:var(--muted); margin:0 0 16px; line-height:1.6}
+    .formwrap{
+      border:1px solid var(--line);
+      background:rgba(11,15,23,.55);
+      border-radius:16px;
+      overflow:hidden;
+    }
+    iframe{width:100%; border:0}
+    .consent{
+      margin-top:10px;
+      color:var(--muted);
+      font-size:12.5px;
+      line-height:1.5;
+    }
+    .footer{
+      margin:22px 0 10px;
+      display:flex; flex-wrap:wrap; justify-content:space-between; gap:12px;
+      color:var(--muted); font-size:13px;
+      padding:14px 6px;
+    }
+    .footer a{color:var(--text); text-decoration:underline; text-decoration-color:rgba(200,168,90,.55)}
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="nav">
+      <div class="brand">
+        <span class="dot"></span>
+        <span>JT Home Buyers LLC</span>
+      </div>
+      <div class="navlinks">
+        <a href="#how">How it works</a>
+        <a href="#offer">Get an offer</a>
+        <a class="cta" href="tel:+19894952743">Call/Text (989) 495-2743</a>
+      </div>
+    </div>
+
+    <div class="hero">
+      <div class="panel">
+        <div class="kicker"><span class="line"></span><span>Midland, Michigan</span></div>
+        <h1>Sell your house <span style="background:linear-gradient(135deg,var(--gold),var(--gold2));-webkit-background-clip:text;background-clip:text;color:transparent;">as-is</span> — fast, professional, no pressure.</h1>
+        <p class="lead">
+          We’re a local home buying company. If you want a simple sale without repairs, showings, or commissions,
+          submit your property details and we’ll follow up quickly.
+        </p>
+        <div class="actions">
+          <a class="btn primary" href="#offer">Get a Cash Offer</a>
+          <a class="btn" href="tel:+19894952743">Call/Text (989) 495-2743</a>
+        </div>
+
+        <div class="grid" id="how">
+          <div class="card">
+            <h3>1) Tell us about the property</h3>
+            <p>Share the address and basic details using the form below.</p>
+          </div>
+          <div class="card">
+            <h3>2) We review & follow up</h3>
+            <p>We’ll reach out to ask a few questions and confirm your timeline.</p>
+          </div>
+          <div class="card">
+            <h3>3) Choose your next step</h3>
+            <p>Get a no-obligation offer and decide what works best for you.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="mini">
+          <div class="stat">
+            <div class="t">Local service area</div>
+            <div class="v">Midland & surrounding areas</div>
+          </div>
+          <div class="stat">
+            <div class="t">Property condition</div>
+            <div class="v">Any condition — no repairs needed</div>
+          </div>
+          <div class="stat">
+            <div class="t">Phone</div>
+            <div class="v">(989) 495-2743</div>
+          </div>
+          <div class="stat">
+            <div class="t">Next step</div>
+            <div class="v">Submit details below</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" id="offer">
+      <h2>Get your cash offer</h2>
+      <p class="sub">Complete the form and we’ll follow up. No spam. No pressure.</p>
+
+      <div class="formwrap">
+        <!-- Replace the iframe src with your Podio iframe embed link -->
+        <iframe src="https://podio.com/webforms/30586890/2588642" height="980" title="JT Home Buyers LLC - Offer Form"></iframe>
+      </div>
+
+      <p class="consent">
+        By submitting this form, you agree to receive calls and text messages from JT Home Buyers LLC regarding your property inquiry.
+        Message and data rates may apply. Reply STOP to opt out.
+      </p>
+    </div>
+
+    <div class="footer">
+      <div>© <span id="y"></span> JT Home Buyers LLC • Midland, MI</div>
+      <div>
+        <a href="privacy.html">Privacy Policy</a> •
+        <a href="tel:+19894952743">Call/Text (989) 495-2743</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Privacy Policy | JT Home Buyers LLC</title>
+  <meta name="theme-color" content="#0b0f17" />
+
+  <style>
+    :root{
+      --bg:#070a10;
+      --panel:#0b0f17;
+      --card:#0f1623;
+      --text:#eaf0ff;
+      --muted:#a7b0c7;
+      --line:rgba(255,255,255,.10);
+      --gold:#c8a85a;
+      --shadow:0 20px 60px rgba(0,0,0,.45);
+      --radius:18px;
+      --max:900px;
+      --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+    }
+
+    *{box-sizing:border-box}
+
+    body{
+      margin:0;
+      font-family:var(--font);
+      color:var(--text);
+      background:
+        radial-gradient(1200px 700px at 20% 10%, rgba(200,168,90,.18), transparent 60%),
+        linear-gradient(180deg, var(--bg), #060813 55%, #05060d);
+    }
+
+    .wrap{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:26px;
+    }
+
+    .top{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:12px;
+      margin-bottom:14px;
+      flex-wrap:wrap;
+    }
+
+    .pill{
+      padding:10px 14px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background:rgba(11,15,23,.55);
+      font-weight:700;
+    }
+
+    .panel{
+      border:1px solid var(--line);
+      background:rgba(15,22,35,.60);
+      border-radius:var(--radius);
+      padding:26px;
+      box-shadow:var(--shadow);
+    }
+
+    h1{
+      margin:0 0 14px;
+      font-size:28px;
+      letter-spacing:-.01em;
+    }
+
+    p{
+      color:var(--muted);
+      line-height:1.7;
+      margin:0 0 14px;
+    }
+
+    a{
+      color:#ffffff;
+      text-decoration:underline;
+      text-decoration-color:rgba(200,168,90,.55);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="top">
+      <div class="pill">JT Home Buyers LLC</div>
+      <a class="pill" href="index.html">← Back to Home</a>
+    </div>
+
+    <div class="panel">
+      <h1>Privacy Policy</h1>
+
+      <p>
+        JT Home Buyers LLC respects your privacy. We collect personal information such as your name, phone number,
+        and property details when you voluntarily submit them through our website or through authorized marketing partners.
+      </p>
+
+      <p>
+        This information is used solely to contact you regarding your property inquiry. We do not sell or share your
+        information with unaffiliated third parties except as necessary to provide our services.
+      </p>
+
+      <p>
+        By submitting your information, you consent to receive calls and text messages from JT Home Buyers LLC.
+        Message and data rates may apply. You may opt out at any time by replying STOP.
+      </p>
+
+      <p>
+        <strong>Contact Information</strong><br>
+        JT Home Buyers LLC<br>
+        Midland, MI<br>
+        Phone: <a href="tel:+19894952743">(989) 495-2743</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>
